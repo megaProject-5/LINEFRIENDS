@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+.login_wrap{
+    text-align: center;
+    width: 360px;
+    margin: 0 auto;
+    padding: 60px 0 70px;
+}
+.ip_box{
+    width: 100%;
+    position: relative;
+}
+.ip_label{
+    display: block;
+}
