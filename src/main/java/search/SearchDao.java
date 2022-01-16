@@ -33,4 +33,14 @@ public class SearchDao {
 		}, word);
 		return rs.isEmpty()? null:rs.get(0);// 수정 필요 -> 1개의 값만 가져오고있음
 	}
+	
+	public void insertDibs() {
+		// 상품을 위시리스트에 넣는 메서드
+		String sql = "INSERT INTO wishlist(m_value,p_value) VALUES(?,?) ";
+	}
+	
+	public void deleteDibs() {
+		// 위시리스트에 넣은 상품 빼기
+		String sql = "DELETE FROM wishlist ";
+	}
 }
