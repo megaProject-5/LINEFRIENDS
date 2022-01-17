@@ -6,6 +6,12 @@ public class LoginDto {
 	private String id;
 	private String pw;
 	private LocalDateTime loginDate;
+	
+	public LoginDto(String id, String pw, LocalDateTime loginDate) {
+		this.id = id;
+		this.pw = pw;
+		this.loginDate = loginDate;
+	}
 
 	public String getId() {
 		return id;
