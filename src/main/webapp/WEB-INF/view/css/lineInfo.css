@@ -1,0 +1,184 @@
+@charset "UTF-8";
+
+body, input, textarea, select, button, table {
+	font-family: Helvetica, '나눔고딕', 'Nanum Gothic', '나눔스퀘어', 'Nanum Square',
+		'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕', Dotum, '돋움',
+		sans-serif;
+	font-size: 12px;
+	line-height: 1.5em;
+}
+
+strong {
+	font-weight: bold;
+}
+
+div {
+	display: block;
+}
+
+.wrap {
+	position: relative;
+	overflow: hidden;
+	min-width: 1320px;
+}
+
+.content {
+	width: 1280px;
+	margin: 0 auto;
+}
+
+.infocontainer {
+	margin-top: 50px;
+}
+
+.infopage {
+	font-size: 22px;
+	line-height: 24px;
+	color: #000000;
+}
+
+.infodiv {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.under {
+	border-bottom: 2px solid #000000;
+	margin-bottom: 39px;
+	padding-bottom: 22px;
+}
+
+.detail {
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+}
+
+.name {
+	font-size: 26px;
+	line-height: 30px;
+}
+
+.namediv .detailname {
+	margin-top: 4px;
+	font-size: 13px;
+	color: #888888;
+}
+
+.namediv .keyworddiv {
+	margin-top: 39px;
+}
+
+.namediv .keyword {
+	float: left;
+	width: 89px;
+	color: #888888;
+	font-size: 14px;
+}
+
+.namediv .hash {
+	overflow: hidden;
+}
+
+.namediv .hashtag {
+	display: inline-block;
+	margin: 0 3px 7px 0;
+	padding: 0 4px;
+	background-color: #f5f8fc;
+	color: #a7a7a7;
+	line-height: 22px;
+	vertical-align: top;
+}
+
+.buisnessdiv .report {
+	position: relative;
+	display: block;
+	min-width: 101px;
+	height: 24px;
+	padding: 0 6px 0 23px;
+	border: 1px solid #dbdbdb;
+	font-size: 11px;
+	letter-spacing: -0.3px;
+	color: #4a4a4a;
+	line-height: 22px;
+}
+
+.buisnessdiv .buisnessdetail .certification {
+	display: inline-block;
+	margin-left: 5px;
+	font-size: 12px;
+	letter-spacing: -0.4px;
+	color: #3097b4;
+	vertical-align: top;
+}
+
+.buisnessdiv .centernumber {
+	display: table-cell;
+	vertical-align: top;
+	word-break: break-all;
+}
+
+.buisnessdiv .center {
+	display: table-cell;
+	padding-right: 25px;
+	min-width: 54px;
+	color: #888888;
+	vertical-align: top;
+}
+
+.buisnessdiv .buisnessdetail {
+	display: table;
+	table-layout: fixed;
+}
+
+.buisnessdiv .representativename {
+	display: table-cell;
+	vertical-align: top;
+	word-break: break-all;
+}
+
+.buisnessdiv .representative {
+	display: table-cell;
+	padding-right: 25px;
+	min-width: 54px;
+	color: #888888;
+	vertical-align: top;
+}
+
+.buisnessdiv .company {
+	display: table-cell;
+	vertical-align: top;
+	word-break: break-all;
+}
+
+.buisnessdiv .buisnessname {
+	display: table-cell;
+	padding-right: 25px;
+	min-width: 54px;
+	color: #888888;
+	vertical-align: top;
+}
+
+.buisnessdiv .buisnessinfo {
+	float: left;
+	max-width: 29%;
+	font-size: 14px;
+	line-height: 25px;
+}
+
+.buisnessdiv .buisnessinfodiv {
+	margin-top: 9px;
+}
+
+.buisnessdiv .buisness {
+	font-size: 16px;
+}
+
+.buisnessdiv {
+	margin-top: 47px;
+}
+
+.buisnessdiv .buisnessinfo+.buisnessinfo {
+	max-width: 62%;
+	margin-left: 53px;
+}
