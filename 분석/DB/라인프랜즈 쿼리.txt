@@ -1,0 +1,65 @@
+* 로그인
+SELECT m_pw FROM memberinfo WHERE m_id = ? AND m_status = 0
+
+* 마지막 접속일 추가
+UPDATE memberinfo SET m_logintim = ? WHERE member_id = ?
+
+* 내 장바구니(cart) 불러오기
+SELECT * FROM cart INNER JOIN memberinfo ON memberinfo.m_value = cart.m_value WHERE m_id = ?
+
+* 장바구니(cart) 상품정보 불러오기
+SELECT * FROM cart INNER JOIN product ON product.p_value = cart.p_value
+
+* 장바구니(cart) 상품 추가
+INSERT INTO cart(m_value, p_value) VALUES(?, ?)
+
+* 장바구니(cart) 상품 제거
+DELETE FROM cart WHERE c_value = ?
+
+* 장바구니(cart) 상품 전체 제거
+
+
+* 내 찜목록(wishlist) 불러오기
+SELECT * FROM wishlist INNER JOIN memberinfo ON memberinfo.m_value = wishlist.m_value WHERE m_id = ?
+
+* 찜목록(wishlist) 상품정보 불러오기
+SELECT * FROM wishlist INNER JOIN product ON product.p_value = wishlist.p_value
+
+* 찜목록(wishlist) 상품 추가
+INSERT INTO wishlist(m_value, p_value) VALUES(?, ?)
+
+* 찜목록(wishlist) 상품 제거
+DELETE FROM wishlist WHERE c_value = ?
+
+* 찜목록(wishlist) 상품 전체 제거
+
+
+* 배송지정보 추가 (di_kinds, di_num2, di_memo -> null 가능)
+INSERT INTO deliveryinfo(m_value, di_name, di_kinds, di_num1, di_num2, di_address, di_memo) VALUES(?, ?, ?, ?, ?, ?, ?)
+
+* 아이디 고유값(m_value) 불러오기
+SELECT m_value FROM memberinfo WHERE m_id = ?
+
+* 내 배송지정보 불러오기
+SELECT * FROM deliveryinfo INNER JOIN memberinfo ON memberinfo.m_value = deliveryinfo.m_value WHERE m_id = ?
+
+* 상품정보(product) 불러오기
+SELECT * FROM product WHERE p_value = ?
+
+* 상품 상세정보(infomation) 불러오기
+SELECT * FROM product INNER JOIN infomation ON infomation.p_value = product.p_value
+>> product테이블과 infomation테이블 값이 모두 나오므로 수정 필요(중복된 칼럼나옴)
+
+* 리뷰 쓰기
+INSERT INTO review(p_value, m_value, r_date, r_contents, r_grade) VALUE(?, ?, ?, ?, ?)
+
+* 리뷰 댓글
+UPDATE review SET r_comment = "댓글" WHERE r_value = ?
+
+* Q&A 쓰기
+INSERT INTO qna(p_value, m_value, q_date, q_contents) VALUE(?, ?, ?, ?)
+
+* Q&A 답변
+UPDATE qna SET q_comment = "답변", q_status = "1" WHERE q_value = ?
+===
+
