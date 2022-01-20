@@ -1,2 +1,247 @@
 @charset "UTF-8";
 
+body, input, textarea, select, button, table {
+	font-family: Helvetica, '나눔고딕', 'Nanum Gothic', '나눔스퀘어', 'Nanum Square',
+		'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕', Dotum, '돋움',
+		sans-serif;
+	font-size: 12px;
+	line-height: 1.5em;
+}
+
+strong {
+	font-weight: bold;
+}
+
+input[type="checkbox" i] {
+	background-color: initial;
+	cursor: default;
+	appearance: auto;
+	box-sizing: border-box;
+	margin: 3px 3px 3px 4px;
+	padding: initial;
+	border: initial;
+}
+
+i {
+	font-style: italic;
+}
+
+label {
+	cursor: default;
+}
+
+col {
+	display: table-column;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+colgroup {
+	display: table-column-group;	
+}
+
+div {
+	display: block;
+}
+
+thead {
+	display: table-header-group;
+	vertical-align: middle;
+	border-color: inherit;
+}
+
+tr {
+	display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+tbody {
+	display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+th {
+	display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align: -internal-center;
+}
+
+.wrap {
+	position: relative;
+	overflow: hidden;
+	min-width: 1320px;
+}
+
+.content {
+	width: 1280px;
+	margin: 0 auto;
+}
+
+.QAdiv {
+	margin-top: 50px;
+}
+
+.QAname {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.strong {
+	font-size: 22px;
+	line-height: 24px;
+	color: #000000;
+}
+
+.QAdiv .Filter {
+	float: right;
+	margin-top: -4px;
+}
+
+.QAdiv .myQA {
+	display: inline-block;
+	margin-right: 20px;
+	padding-top: 8px;
+	vertical-align: top;
+}
+
+
+.btn_text {
+	background-color: lime;
+	
+}
+
+.checkbox {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  margin: 50px auto;
+}
+#switch {
+  position: absolute;
+  /* hidden */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.switch_label {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  width: 58px;
+  height: 28px;
+  background: #bebebe;
+  border-radius: 20px;
+  transition: 0.2s;
+}
+.switch_label:hover {
+  background: #efefef;
+}
+.onf_btn {
+  position: absolute;
+  top: 4px;
+  left: 3px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background: #fff;
+  transition: 0.2s;
+}
+
+/* checking style */
+#switch:checked+.switch_label {
+  background: #03d200;
+}
+
+#switch:checked+.switch_label:hover {
+  background: #6cff65;
+}
+
+/* move */
+#switch:checked+.switch_label .onf_btn {
+  left: 34px;
+  background: #fff;
+  box-shadow: 1px 2px 3px #00000020;
+}
+
+.menubar {
+	text-align: center;
+}
+
+.menubar .before{
+	height: 34px;
+	line-height: 34px;
+	color: #888888;
+	margin-right: 13px;
+}
+
+.menubar .next {
+	height: 34px;
+	line-height: 34px;
+	color: #888888;
+	margin-left: 13px;
+}
+
+.menubar._div .page[aria-currunt=true] {
+	color: #ffffff;
+}
+
+.menubar .page[aria-currunt=true] {
+	color: #2f2f2f;
+}
+
+.menubar._div .page {
+	width: 34px;
+	height: 34px;
+	font-size: 12px;
+	line-height: 34px;
+	color: #4a4a4a;
+}
+
+.list {
+	position: relative;
+    width: 100%;
+    table-layout: fixed;
+    border-top: 2px solid #000000;
+    border-bottom: 1px solid #dadada;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.list .listList:first-child {
+	border-color: #dadada;
+}
+
+.list .listList {
+	border-top: 1px solid #f1f1f1;
+}
+
+.listdiv head {
+	padding: 20px;
+}
+
+.listdiv ._head {
+	letter-spacing: -1.2px;
+}
+
+.list .head {
+	overflow: hidden;
+    vertical-align: middle;
+    text-align: center;
+    word-break: break-all;
+    padding: 17px 0;
+}
+
+
+
+
+
+
+
