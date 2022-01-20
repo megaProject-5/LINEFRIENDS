@@ -1,38 +1,43 @@
-* 로그인
+* 로그인 -1 
 SELECT m_pw FROM memberinfo WHERE m_id = ? AND m_status = 0
+-> 회원상태가 0이고 입력한 아이디를 가진 memberinfo의 m_pw 가져오기
 
-* 마지막 접속일 추가
-UPDATE memberinfo SET m_logintim = ? WHERE member_id = ?
+* 로그인 -2
+UPDATE memberinfo SET m_loginDate = ? WHERE member_id = ?
+-> 입력한 아이디값을 가진 memberinfo에 m_loginDate 추가
 
 * 내 장바구니(cart) 불러오기
 SELECT * FROM cart INNER JOIN memberinfo ON memberinfo.m_value = cart.m_value WHERE m_id = ?
 
 * 장바구니(cart) 상품정보 불러오기
 SELECT * FROM cart INNER JOIN product ON product.p_value = cart.p_value
+>> 옵션 추가 필요 - 테스트중
 
 * 장바구니(cart) 상품 추가
-INSERT INTO cart(m_value, p_value) VALUES(?, ?)
+INSERT INTO cart(m_value, p_value, c_date)
+VALUE(?, ?, ?)
 
 * 장바구니(cart) 상품 제거
 DELETE FROM cart WHERE c_value = ?
 
-* 장바구니(cart) 상품 전체 제거
-
-
-* 내 찜목록(wishlist) 불러오기
-SELECT * FROM wishlist INNER JOIN memberinfo ON memberinfo.m_value = wishlist.m_value WHERE m_id = ?
-
-* 찜목록(wishlist) 상품정보 불러오기
-SELECT * FROM wishlist INNER JOIN product ON product.p_value = wishlist.p_value
+* 내 찜목록(wishlist) 불러오기 - (찜목록 고유값, 찜한 날짜, 상품명, 판매가)
+SELECT w_value, w_date, p_name, p_discount FROM wishlist
+INNER JOIN product ON product.p_value = wishlist.p_value
+INNER JOIN memberinfo ON wishlist.m_value = memberinfo.m_value
+WHERE m_id = ?
+--
+AS 사용 시
+SELECT w_value, w_date, p_name, p_discount FROM wishlist AS W
+INNER JOIN product AS P ON P.p_value = W.p_value
+INNER JOIN memberinfo AS M ON W.m_value = M.m_value
+WHERE m_id = "id0002";
 
 * 찜목록(wishlist) 상품 추가
-INSERT INTO wishlist(m_value, p_value) VALUES(?, ?)
+INSERT INTO wishlist(m_value, p_value, w_date)
+VALUE(?, ?, ?)
 
 * 찜목록(wishlist) 상품 제거
-DELETE FROM wishlist WHERE c_value = ?
-
-* 찜목록(wishlist) 상품 전체 제거
-
+DELETE FROM wishlist WHERE w_value = ?
 
 * 배송지정보 추가 (di_kinds, di_num2, di_memo -> null 가능)
 INSERT INTO deliveryinfo(m_value, di_name, di_kinds, di_num1, di_num2, di_address, di_memo) VALUES(?, ?, ?, ?, ?, ?, ?)
