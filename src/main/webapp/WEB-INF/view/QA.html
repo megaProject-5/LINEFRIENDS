@@ -3,12 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <title>묻고 답하기 : 라인프렌즈</title>
+<link rel="stylesheet" href="../css/QA.css" />
 </head>
 <body>
 	<div class="wrap">
 		<!-- 헤더 -->
-		
-		<div class="content" style="width:1280px;margin:0 auto">
+
+		<div class="content" style="width: 1280px; margin: 0 auto">
 			<div class="QAdiv">
 				<div class="QA">
 					<div class="QAname">
@@ -16,36 +17,155 @@
 					</div>
 					<div class="Filter">
 						<div class="myQA">
-							<div>
-								<input type="checkbox" class="check" readonly>
-								<label for="check" class="onoff">
-									<span class="myQAbox">내 Q&A만 보기</span>
-									<i class="switch"></i>
-								</label>
+							<span class="btn_text">내 Q&A만 보기</span>
+							<div class="checkbox">
+								<input type="checkbox" id="switch"> 
+									<label for="switch"	class="switch_label"> 
+										<span class="onf_btn"></span>
+									</label>
 							</div>
 						</div>
 						<div class="status">
-							<button type="button" class="selectbox" aria-paspoput="true" aria-expanded="false">
-							답변상태
-							<span class="down"></span>
+							<button type="button" class="selectbox" aria-haspopup="true"
+								aria-expanded="false">
+								<select>
+									<option value="1">답변상태</option>
+									<option value="2">미답변</option>
+									<option value="3">답변완료</option>
+								</select>
 							</button>
 						</div>
 					</div>
 				</div>
-				<div></div>
-				<div class="menubar" style="margin-top:50px;margin-bottom:50px" role="menubar">
-					<a href="" class="before" aria-hidden="true" role="button">이전</a>
-					<a href="" class="page" aria-current="false" role="menuitem">1</a>
-					<a href="" class="page" aria-current="false" role="menuitem">2</a>
-					<a href="" class="page" aria-current="false" role="menuitem">3</a>
-					<a href="" class="page" aria-current="false" role="menuitem">4</a>
-					<a href="" class="page" aria-current="false" role="menuitem">5</a>
-					<a href="" class="page" aria-current="false" role="menuitem">6</a>
-					<a href="" class="page" aria-current="false" role="menuitem">7</a>
-					<a href="" class="page" aria-current="false" role="menuitem">8</a>
-					<a href="" class="page" aria-current="false" role="menuitem">9</a>
-					<a href="" class="page" aria-current="false" role="menuitem">10</a>
-					<a href="" class="next" aria-hidden="false" role="button">다음</a>
+
+				<div>
+					<div></div>
+					<div class="listdiv" style="margin-top: 13px">
+						<table class="list">
+							<colgroup>
+								<col class="listStatus">
+								<col>
+								<col class="listStatus">
+								<col class="listStatus">
+							</colgroup>
+							<thead>
+								<tr class="listList">
+									<th class="head _head">답변상태</th>
+									<th class="head _head">제목/상품</th>
+									<th class="head _head">작성자</th>
+									<th class="head _head">작성일</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="listList">
+									<td class="head">답변상태</td>
+									<td class="head">제목/상품</td>
+									<td class="head">작성자</td>
+									<td class="head">작성일</td>
+								</tr>
+								<tr class="listList">
+									<td class="head">답변상태</td>
+									<td class="head">제목/상품</td>
+									<td class="head">작성자</td>
+									<td class="head">작성일</td>
+								</tr>
+								<tr class="listList">
+									<td class="head">답변상태</td>
+									<td class="head">제목/상품</td>
+									<td class="head">작성자</td>
+									<td class="head">작성일</td>
+								</tr>
+								<tr class="listList">
+									<td class="head">답변상태</td>
+									<td class="head">제목/상품</td>
+									<td class="head">작성자</td>
+									<td class="head">작성일</td>
+								</tr>
+								<tr class="listList">
+									<td class="head">답변상태</td>
+									<td class="head">제목/상품</td>
+									<td class="head">작성자</td>
+									<td class="head">작성일</td>
+								</tr>
+								<tr class="listList">
+									<td class="head">답변상태</td>
+									<td class="head">제목/상품</td>
+									<td class="head">작성자</td>
+									<td class="head">작성일</td>
+								</tr>
+								<tr class="listList">
+									<td class="head">답변상태</td>
+									<td class="head">제목/상품</td>
+									<td class="head">작성자</td>
+									<td class="head">작성일</td>
+								</tr>
+								<tr class="listList">
+									<td class="head">답변상태</td>
+									<td class="head">제목/상품</td>
+									<td class="head">작성자</td>
+									<td class="head">작성일</td>
+								</tr>
+								<tr class="listList">
+									<td class="head">답변상태</td>
+									<td class="head">제목/상품</td>
+									<td class="head">작성자</td>
+									<td class="head">작성일</td>
+								</tr>
+								<tr class="listList">
+									<td class="head">답변상태</td>
+									<td class="head">제목/상품</td>
+									<td class="head">작성자</td>
+									<td class="head">작성일</td>
+								</tr>
+								<tr class="listList">
+									<td class="head">답변상태</td>
+									<td class="head">제목/상품</td>
+									<td class="head">작성자</td>
+									<td class="head">작성일</td>
+								</tr>
+								<tr class="listList">
+									<td class="head">답변상태</td>
+									<td class="head">제목/상품</td>
+									<td class="head">작성자</td>
+									<td class="head">작성일</td>
+								</tr>
+								<tr class="listList">
+									<td class="head">답변상태</td>
+									<td class="head">제목/상품</td>
+									<td class="head">작성자</td>
+									<td class="head">작성일</td>
+								</tr>
+								<tr class="listList">
+									<td class="head">답변상태</td>
+									<td class="head">제목/상품</td>
+									<td class="head">작성자</td>
+									<td class="head">작성일</td>
+								</tr>
+								<tr class="listList">
+									<td class="head">답변상태</td>
+									<td class="head">제목/상품</td>
+									<td class="head">작성자</td>
+									<td class="head">작성일</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="menubar _div"
+					style="margin-top: 50px; margin-bottom: 50px" role="menubar">
+					<a href="" class="before" aria-hidden="true" role="button">이전</a> <a
+						href="" class="page" aria-current="false" role="menuitem">1</a> <a
+						href="" class="page" aria-current="false" role="menuitem">2</a> <a
+						href="" class="page" aria-current="false" role="menuitem">3</a> <a
+						href="" class="page" aria-current="false" role="menuitem">4</a> <a
+						href="" class="page" aria-current="false" role="menuitem">5</a> <a
+						href="" class="page" aria-current="false" role="menuitem">6</a> <a
+						href="" class="page" aria-current="false" role="menuitem">7</a> <a
+						href="" class="page" aria-current="false" role="menuitem">8</a> <a
+						href="" class="page" aria-current="false" role="menuitem">9</a> <a
+						href="" class="page" aria-current="false" role="menuitem">10</a> <a
+						href="" class="next" aria-hidden="false" role="button">다음</a>
 				</div>
 				<div class="search">
 					<div></div>
@@ -53,7 +173,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<!-- 푸터 -->
 	</div>
 </body>
